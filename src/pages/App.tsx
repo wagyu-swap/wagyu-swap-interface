@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { Credentials, StringTranslations } from '@crowdin/crowdin-api-client'
-import { LangType } from '@pancakeswap-libs/uikit'
+import { Language } from '@wagyu-swap-libs/uikit'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { RedirectDuplicateTokenIds, RedirectOldAddLiquidityPathStructure } from './AddLiquidity/redirects'
@@ -49,7 +49,7 @@ const BodyWrapper = styled.div`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg'),
-      url('/images/left-pancake.svg'), url('/images/right-pancake.svg');
+      url('/images/left-panwagyu.svg'), url('/images/right-panwagyu.svg');
     background-repeat: no-repeat;
     background-position: center 420px, 10% 230px, 90% 230px;
     background-size: contain, 266px, 266px;
@@ -61,7 +61,7 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
-const CACHE_KEY = 'pancakeSwapLanguage'
+const CACHE_KEY = 'wagyuSwapLanguage'
 
 export default function App() {
   const [selectedLanguage, setSelectedLanguage] = useState<any>(undefined)
@@ -94,20 +94,20 @@ export default function App() {
   }, [])
 
   const fetchTranslationsForSelectedLanguage = async () => {
-    stringTranslationsApi
-      .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
-      .then((translationApiResponse) => {
-        if (translationApiResponse.data.length < 1) {
-          setTranslations(['error'])
-        } else {
-          setTranslations(translationApiResponse.data)
-        }
-      })
-      .then(() => setTranslatedLanguage(selectedLanguage))
-      .catch((error) => {
-        setTranslations(['error'])
-        console.error(error)
-      })
+    // stringTranslationsApi
+    //   .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
+    //   .then((translationApiResponse) => {
+    //     if (translationApiResponse.data.length < 1) {
+    //       setTranslations(['error'])
+    //     } else {
+    //       setTranslations(translationApiResponse.data)
+    //     }
+    //   })
+    //   .then(() => setTranslatedLanguage(selectedLanguage))
+    //   .catch((error) => {
+    //     setTranslations(['error'])
+    //     console.error(error)
+    //   })
   }
 
   useEffect(() => {
@@ -117,7 +117,7 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedLanguage])
 
-  const handleLanguageSelect = (langObject: LangType) => {
+  const handleLanguageSelect = (langObject: Language) => {
     setSelectedLanguage(langObject)
     localStorage.setItem(CACHE_KEY, langObject.code)
   }
