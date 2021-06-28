@@ -1,7 +1,7 @@
-import { Currency, ETHER, Token } from '@pancakeswap-libs/sdk'
+import { Currency, VLX, Token } from '@wagyu-swap-libs/sdk'
 
 export function currencyId(currency: Currency): string {
-  if (currency === ETHER) return 'BNB'
+  if (currency === VLX) return 'BNB'
   if (currency instanceof Token) return currency.address
   throw new Error('invalid currency')
 }

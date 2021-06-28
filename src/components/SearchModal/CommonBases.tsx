@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from '@wagyu-swap-libs/uikit'
-import { ChainId, Currency, currencyEquals, ETHER, Token } from '@pancakeswap-libs/sdk'
+import { ChainId, Currency, currencyEquals, VLX, Token } from '@wagyu-swap-libs/sdk'
 import styled from 'styled-components'
 
 import useI18n from 'hooks/useI18n'
@@ -45,13 +45,13 @@ export default function CommonBases({
       <AutoRow gap="4px">
         <BaseWrapper
           onClick={() => {
-            if (!selectedCurrency || !currencyEquals(selectedCurrency, ETHER)) {
-              onSelect(ETHER)
+            if (!selectedCurrency || !currencyEquals(selectedCurrency, VLX)) {
+              onSelect(VLX)
             }
           }}
-          disable={selectedCurrency === ETHER}
+          disable={selectedCurrency === VLX}
         >
-          <CurrencyLogo currency={ETHER} style={{ marginRight: 8 }} />
+          <CurrencyLogo currency={VLX} style={{ marginRight: 8 }} />
           <Text>BNB</Text>
         </BaseWrapper>
         {(chainId ? SUGGESTED_BASES[chainId] : []).map((token: Token) => {

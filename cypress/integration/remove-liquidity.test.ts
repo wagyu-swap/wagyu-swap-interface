@@ -7,13 +7,13 @@ describe('Remove Liquidity', () => {
     )
   })
 
-  it('bnb remove', () => {
+  it('vlx remove', () => {
     cy.visit('/remove/BNB/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')
     cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'BNB')
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'CAKE')
   })
 
-  it('bnb remove swap order', () => {
+  it('vlx remove swap order', () => {
     cy.visit('/remove/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/BNB')
     cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'CAKE')
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'BNB')

@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import useGetPriceData from './useGetPriceData'
-import { CAKE } from '../constants'
+import { WAGYU } from '../constants'
 
 const useGetDocumentTitlePrice = () => {
   const priceData = useGetPriceData()
 
-  const wagyuPriceUsd = priceData ? parseFloat(priceData.data[CAKE.address].price) : 0
+  const wagyuPriceUsd = priceData ? parseFloat(priceData.data[WAGYU.address]?.price || '0') : 0
 
   const wagyuPriceUsdString =
     Number.isNaN(wagyuPriceUsd) || wagyuPriceUsd === 0
@@ -16,7 +16,7 @@ const useGetDocumentTitlePrice = () => {
         })}`
 
   useEffect(() => {
-    document.title = `PancakeSwap${wagyuPriceUsdString}`
+    document.title = `WagyuSwap${wagyuPriceUsdString}`
   }, [wagyuPriceUsdString])
 }
 export default useGetDocumentTitlePrice

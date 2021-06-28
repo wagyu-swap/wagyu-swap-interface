@@ -1,9 +1,9 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
-import { TokenAmount, Token, ChainId, Percent, JSBI } from '@pancakeswap-libs/sdk'
+import { TokenAmount, Token, ChainId, Percent, JSBI } from '@wagyu-swap-libs/sdk'
 
 import {
-  getBscScanLink,
+  getVelasScanLink,
   calculateSlippageAmount,
   isAddress,
   shortenAddress,
@@ -14,22 +14,22 @@ import {
 describe('utils', () => {
   describe('#getBscScanLink', () => {
     it('correct for tx', () => {
-      expect(getBscScanLink(1, 'abc', 'transaction')).toEqual('https://bscscan.com/tx/abc')
+      expect(getVelasScanLink(1, 'abc', 'transaction')).toEqual('https://bscscan.com/tx/abc')
     })
     it('correct for token', () => {
-      expect(getBscScanLink(1, 'abc', 'token')).toEqual('https://bscscan.com/token/abc')
+      expect(getVelasScanLink(1, 'abc', 'token')).toEqual('https://bscscan.com/token/abc')
     })
     it('correct for address', () => {
-      expect(getBscScanLink(1, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
+      expect(getVelasScanLink(1, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
     })
     it('unrecognized chain id defaults to mainnet', () => {
-      expect(getBscScanLink(2, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
+      expect(getVelasScanLink(2, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
     })
     it('ropsten', () => {
-      expect(getBscScanLink(3, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
+      expect(getVelasScanLink(3, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
     })
     it('enum', () => {
-      expect(getBscScanLink(ChainId.MAINNET, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
+      expect(getVelasScanLink(ChainId.MAINNET, 'abc', 'address')).toEqual('https://bscscan.com/address/abc')
     })
   })
 

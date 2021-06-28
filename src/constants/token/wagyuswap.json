@@ -1,0 +1,46 @@
+{
+  "name": "WagyuSwap Default List",
+  "timestamp": "2021-06-25T09:56:23Z",
+  "version": {
+    "major": 2,
+    "minor": 10,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
+  "keywords": ["wagyu", "default"],
+  "tokens": [
+    {
+      "name": "WVLX Token",
+      "symbol": "WVLX",
+      "address": "0xf70A6F553f201Ca0fdb373d6D9A485e488cde961",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xf70A6F553f201Ca0fdb373d6D9A485e488cde961.png"
+    },
+    {
+      "name": "Velas USDT Token",
+      "symbol": "VUSDT",
+      "address": "0xEE29a9bE710f08eeA29fa4554bD0f97f0DDa659F",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xEE29a9bE710f08eeA29fa4554bD0f97f0DDa659F.png"
+    },
+    {
+      "name": "Velas Ethereum Token",
+      "symbol": "VETHER",
+      "address": "0x62D0C19C6bc72e0bD68a1e4a34ee0aeA19F3f963",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x62D0C19C6bc72e0bD68a1e4a34ee0aeA19F3f963.png"
+    },
+    {
+      "name": "WagyuSwap Token",
+      "symbol": "WAGYU",
+      "address": "0xb0922F3D63A55517468b6Eb4383f2CaD3Abf856D",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xb0922F3D63A55517468b6Eb4383f2CaD3Abf856D.png"
+    }
+  ]
+}

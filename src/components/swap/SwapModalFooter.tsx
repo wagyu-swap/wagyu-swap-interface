@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@pancakeswap-libs/sdk'
+import { Trade, TradeType } from '@wagyu-swap-libs/sdk'
 import React, { useMemo, useState } from 'react'
 import { Text, Button } from '@wagyu-swap-libs/uikit'
 import { Repeat } from 'react-feather'
@@ -104,7 +104,7 @@ export default function SwapModalFooter({
             <QuestionHelper
               text={TranslateString(
                 999,
-                'For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the PancakeSwap treasury.'
+                'For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the WagyuSwap treasury.'
               )}
             />
           </RowFixed>

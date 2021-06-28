@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@pancakeswap-libs/sdk'
+import { Currency, currencyEquals, VLX, TokenAmount, WVLX } from '@wagyu-swap-libs/sdk'
 import { Button, CardBody, AddIcon, Text as UIKitText } from '@wagyu-swap-libs/uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
@@ -49,8 +49,8 @@ export default function AddLiquidity({
 
   const oneCurrencyIsWBNB = Boolean(
     chainId &&
-      ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
-        (currencyB && currencyEquals(currencyB, WETH[chainId])))
+      ((currencyA && currencyEquals(currencyA, WVLX[chainId])) ||
+        (currencyB && currencyEquals(currencyB, WVLX[chainId])))
   )
   const expertMode = useIsExpertMode()
 
@@ -135,8 +135,8 @@ export default function AddLiquidity({
     let method: (...args: any) => Promise<TransactionResponse>
     let args: Array<string | string[] | number>
     let value: BigNumber | null
-    if (currencyA === ETHER || currencyB === ETHER) {
-      const tokenBIsBNB = currencyB === ETHER
+    if (currencyA === VLX || currencyB === VLX) {
+      const tokenBIsBNB = currencyB === VLX
       estimate = router.estimateGas.addLiquidityETH
       method = router.addLiquidityETH
       args = [
