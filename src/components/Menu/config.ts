@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://pancakeswap.finance/',
+    href: 'https://wagyuswap.finance/',
   },
   {
     label: 'Trade',
@@ -24,17 +24,17 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://pancakeswap.finance/farms',
+    href: 'https://wagyuswap.finance/farms',
   },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://pancakeswap.finance/pools',
-  },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: 'https://wagyuswap.finance/pools',
+  // },
   {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://pancakeswap.finance/lottery',
+    href: 'https://wagyuswap.finance/lottery',
   },
 ]
 

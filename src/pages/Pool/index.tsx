@@ -53,7 +53,6 @@ export default function Pool() {
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
 
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
-
   return (
     <>
       <CardNav activeIndex={1} />
@@ -62,7 +61,7 @@ export default function Pool() {
           title={TranslateString(262, 'Liquidity')}
           description={TranslateString(1168, 'Add liquidity to receive LP tokens')}
         >
-          <Button id="join-pool-button" as={Link} to="/add/BNB">
+          <Button id="join-pool-button" as={Link} to="/add/VLX">
             {TranslateString(168, 'Add Liquidity')}
           </Button>
         </PageHeader>

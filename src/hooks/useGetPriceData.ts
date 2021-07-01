@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { VETHER, VUSDT, WAGYU } from '../constants'
+import { VBNB, VETHER, VUSDT, WAGYU } from '../constants'
 
 type ApiResponse = {
   updated_at: string
@@ -14,14 +14,14 @@ type ApiResponse = {
   }
 }
 
-// const api = 'https://api.pancakeswap.info/api/tokens'
+// const api = 'https://api.wagyuswap.info/api/tokens'
 const api = 'https://explorer.velas.com/ticker'
 
 // data:
 //   0x0C038Bc02C8C9945f194b17C703f800526900A74:
 // name: "SuperNova Protocol"
 // price: "0.01803998730130641259134893653591999"
-// price_BNB: "0.00004547690090850844524878310961274202"
+// price_VLX: "0.00004547690090850844524878310961274202"
 // symbol: "SUPERN"
 // updated_at:
 
@@ -34,7 +34,7 @@ const convertTokenPrices = (prices: any): ApiResponse => {
   response.data[`${WAGYU.address}`] = {
     name: WAGYU.name || '',
     symbol: WAGYU.symbol || '',
-    price: prices.usdt_price.toString(),
+    price: '1.000',
     price_VLX: (prices.usdt_price / prices.price_usd).toString()
   }
   response.data[`${VUSDT.address}`] = {
@@ -48,6 +48,12 @@ const convertTokenPrices = (prices: any): ApiResponse => {
     symbol: VETHER.symbol || '',
     price: prices.eth_price.toString(),
     price_VLX: (prices.eth_price / prices.price_usd).toString()
+  }
+  response.data[`${VBNB.address}`] = {
+    name: VBNB.name || '',
+    symbol: VBNB.symbol || '',
+    price: (prices.eth_price / 6).toString(),
+    price_VLX: (prices.eth_price / 6 / prices.price_usd).toString()
   }
   // @ts-ignore
   return response

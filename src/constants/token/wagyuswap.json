@@ -7,40 +7,48 @@
     "patch": 0
   },
   "tags": {},
-  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
+  "logoURI": "https://exchange.wagyuswap.finance/images/wagyuswap.png",
   "keywords": ["wagyu", "default"],
   "tokens": [
     {
       "name": "WVLX Token",
       "symbol": "WVLX",
-      "address": "0xf70A6F553f201Ca0fdb373d6D9A485e488cde961",
+      "address": "0x9dEFA62631b98B486459B024F4F2986BA092e231",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0xf70A6F553f201Ca0fdb373d6D9A485e488cde961.png"
+      "logoURI": "/images/coins/0x9dEFA62631b98B486459B024F4F2986BA092e231.png"
     },
     {
       "name": "Velas USDT Token",
       "symbol": "VUSDT",
-      "address": "0xEE29a9bE710f08eeA29fa4554bD0f97f0DDa659F",
+      "address": "0x74Be128df5e3f4B6c7Fa68945904510652Baac9B",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0xEE29a9bE710f08eeA29fa4554bD0f97f0DDa659F.png"
+      "logoURI": "/images/coins/0x74Be128df5e3f4B6c7Fa68945904510652Baac9B.png"
     },
     {
       "name": "Velas Ethereum Token",
       "symbol": "VETHER",
-      "address": "0x62D0C19C6bc72e0bD68a1e4a34ee0aeA19F3f963",
+      "address": "0x3CB790052DE008072708b9DE269A0FF97d6cDC09",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x62D0C19C6bc72e0bD68a1e4a34ee0aeA19F3f963.png"
+      "logoURI": "/images/coins/0x3CB790052DE008072708b9DE269A0FF97d6cDC09.png"
+    },
+    {
+      "name": "Velas BNB Token",
+      "symbol": "VBNB",
+      "address": "0x23f639A4986Db3f59F689529871A9412BC6B68b2",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x23f639A4986Db3f59F689529871A9412BC6B68b2.png"
     },
     {
       "name": "WagyuSwap Token",
       "symbol": "WAGYU",
-      "address": "0xb0922F3D63A55517468b6Eb4383f2CaD3Abf856D",
+      "address": "0x9c545b6AF18E67A42cC5562dfb0Ba3e28c33e60a",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0xb0922F3D63A55517468b6Eb4383f2CaD3Abf856D.png"
+      "logoURI": "/images/coins/0x9c545b6AF18E67A42cC5562dfb0Ba3e28c33e60a.png"
     }
   ]
 }

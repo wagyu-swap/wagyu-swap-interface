@@ -52,7 +52,7 @@ export default function CommonBases({
           disable={selectedCurrency === VLX}
         >
           <CurrencyLogo currency={VLX} style={{ marginRight: 8 }} />
-          <Text>BNB</Text>
+          <Text>VLX</Text>
         </BaseWrapper>
         {(chainId ? SUGGESTED_BASES[chainId] : []).map((token: Token) => {
           const selected = selectedCurrency instanceof Token && selectedCurrency.address === token.address

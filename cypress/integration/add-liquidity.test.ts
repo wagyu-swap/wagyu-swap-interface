@@ -1,14 +1,14 @@
 describe.only('Add Liquidity', () => {
   it('loads the two correct tokens', () => {
     cy.visit('/add/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/0xe9e7cea3dedca5984780bafc599bd69add087d56')
-    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'CAKE')
+    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'WAGYU')
     cy.get('#add-liquidity-input-tokenb #pair').should('contain.text', 'BUSD')
   })
 
-  it('does not crash if CAKE is duplicated', () => {
+  it('does not crash if WAGYU is duplicated', () => {
     cy.visit('/add/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')
-    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'CAKE')
-    cy.get('#add-liquidity-input-tokenb #pair').should('not.contain.text', 'CAKE')
+    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'WAGYU')
+    cy.get('#add-liquidity-input-tokenb #pair').should('not.contain.text', 'WAGYU')
   })
 
   it('token not in storage is loaded', () => {

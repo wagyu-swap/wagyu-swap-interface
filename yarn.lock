@@ -4925,10 +4925,10 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@wagyu-swap-libs/uikit@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.1.7.tgz#30ad7a6a7b2d8d7051c86e41d8c6bf202129bcd5"
-  integrity sha512-6b461gqYY3XG3aU9vydZYZFQkB6MQ7XY8y2hzuLIsbJoBBHHc/MwGOjLxzfrrxIbfiW0VqmBYPnSVlAWXS66VA==
+"@wagyu-swap-libs/uikit@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.2.0.tgz#9c4b5278276be36b19418ddf9b6e144032dfc206"
+  integrity sha512-vN5lyLRyRnlkhgo/vHAGFc3QArk03GRgVF6oit/6auJ+lbp8E1PnhvxV0DQdpmKn3u+ZjNzwuscuaHIwIY6oeg==
   dependencies:
     "@pancakeswap-libs/eslint-config-pancake" "^1.0.1"
     "@popperjs/core" "^2.9.2"
@@ -16676,6 +16676,14 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+path@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
+  integrity sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
+  dependencies:
+    process "^0.11.1"
+    util "^0.10.3"
+
 pause-stream@0.0.11:
   version "0.0.11"
   resolved "https://registry.yarnpkg.com/pause-stream/-/pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445"
@@ -17899,7 +17907,7 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-process@^0.11.10:
+process@^0.11.1, process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
@@ -21807,6 +21815,13 @@ util@0.10.3:
   integrity sha1-evsa/lCAUkZInj23/g7TeTNqwPk=
   dependencies:
     inherits "2.0.1"
+
+util@^0.10.3:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/util/-/util-0.10.4.tgz#3aa0125bfe668a4672de58857d3ace27ecb76901"
+  integrity sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
+  dependencies:
+    inherits "2.0.3"
 
 util@^0.11.0:
   version "0.11.1"

@@ -203,8 +203,8 @@ export default function RemoveLiquidity({
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
     if (!liquidityAmount) throw new Error('missing liquidity amount')
 
-    const currencyBIsETH = currencyB === VLX
-    const oneCurrencyIsETH = currencyA === VLX || currencyBIsETH
+    const currencyBIsVLX = currencyB === VLX
+    const oneCurrencyIsVLX = currencyA === VLX || currencyBIsVLX
     const deadlineFromNow = Math.ceil(Date.now() / 1000) + deadline
 
     if (!tokenA || !tokenB) throw new Error('could not wrap')
@@ -213,14 +213,14 @@ export default function RemoveLiquidity({
     let args: Array<string | string[] | number | boolean>
     // we have approval, use normal remove liquidity
     if (approval === ApprovalState.APPROVED) {
-      // removeLiquidityETH
-      if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
+      // removeLiquidityVLX
+      if (oneCurrencyIsVLX) {
+        methodNames = ['removeLiquidityVLX', 'removeLiquidityVLXSupportingFeeOnTransferTokens']
         args = [
-          currencyBIsETH ? tokenA.address : tokenB.address,
+          currencyBIsVLX ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
+          amountsMin[currencyBIsVLX ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
+          amountsMin[currencyBIsVLX ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
           account,
           deadlineFromNow,
         ]
@@ -241,14 +241,14 @@ export default function RemoveLiquidity({
     }
     // we have a signataure, use permit versions of remove liquidity
     else if (signatureData !== null) {
-      // removeLiquidityETHWithPermit
-      if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
+      // removeLiquidityVLXWithPermit
+      if (oneCurrencyIsVLX) {
+        methodNames = ['removeLiquidityVLXWithPermit', 'removeLiquidityVLXWithPermitSupportingFeeOnTransferTokens']
         args = [
-          currencyBIsETH ? tokenA.address : tokenB.address,
+          currencyBIsVLX ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
+          amountsMin[currencyBIsVLX ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
+          amountsMin[currencyBIsVLX ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
           account,
           signatureData.deadline,
           false,
@@ -257,7 +257,7 @@ export default function RemoveLiquidity({
           signatureData.s,
         ]
       }
-      // removeLiquidityETHWithPermit
+      // removeLiquidityVLXWithPermit
       else {
         methodNames = ['removeLiquidityWithPermit']
         args = [
@@ -277,6 +277,7 @@ export default function RemoveLiquidity({
     } else {
       throw new Error('Attempting to confirm without approval or a signature. Please contact support.')
     }
+    console.log('safeGasEstimates ready');
     const safeGasEstimates: (BigNumber | undefined)[] = await Promise.all(
       methodNames.map((methodName, index) =>
         router.estimateGas[methodName](...args)
@@ -554,15 +555,15 @@ export default function RemoveLiquidity({
                                 currencyB === VLX ? WVLX[chainId].address : currencyIdB
                               }`}
                             >
-                              {TranslateString(1188, 'Receive WBNB')}
+                              {TranslateString(1188, 'Receive WVLX')}
                             </StyledInternalLink>
                           ) : oneCurrencyIsWVLX ? (
                             <StyledInternalLink
                               to={`/remove/${
-                                currencyA && currencyEquals(currencyA, WVLX[chainId]) ? 'BNB' : currencyIdA
-                              }/${currencyB && currencyEquals(currencyB, WVLX[chainId]) ? 'BNB' : currencyIdB}`}
+                                currencyA && currencyEquals(currencyA, WVLX[chainId]) ? 'VLX' : currencyIdA
+                              }/${currencyB && currencyEquals(currencyB, WVLX[chainId]) ? 'VLX' : currencyIdB}`}
                             >
-                              {TranslateString(1190, 'Receive BNB')}
+                              {TranslateString(1190, 'Receive VLX')}
                             </StyledInternalLink>
                           ) : null}
                         </RowBetween>

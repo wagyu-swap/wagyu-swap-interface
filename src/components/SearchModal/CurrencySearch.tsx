@@ -57,7 +57,7 @@ export function CurrencySearch({
   const isAddressSearch = isAddress(searchQuery)
   const searchToken = useToken(searchQuery)
 
-  const showETH: boolean = useMemo(() => {
+  const showVLX: boolean = useMemo(() => {
     const s = searchQuery.toLowerCase().trim()
     return s === '' || s === 'v' || s === 'vl' || s === 'vlx'
   }, [searchQuery])
@@ -177,7 +177,7 @@ export function CurrencySearch({
           {({ height }) => (
             <CurrencyList
               height={height}
-              showETH={showETH}
+              showVLX={showVLX}
               currencies={filteredSortedTokens}
               onCurrencySelect={handleCurrencySelect}
               otherCurrency={otherSelectedCurrency}

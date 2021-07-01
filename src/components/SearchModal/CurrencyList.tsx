@@ -159,7 +159,7 @@ export default function CurrencyList({
   onCurrencySelect,
   otherCurrency,
   fixedListRef,
-  showETH,
+  showVLX,
 }: {
   height: number
   currencies: Currency[]
@@ -167,9 +167,9 @@ export default function CurrencyList({
   onCurrencySelect: (currency: Currency) => void
   otherCurrency?: Currency | null
   fixedListRef?: MutableRefObject<FixedSizeList | undefined>
-  showETH: boolean
+  showVLX: boolean
 }) {
-  const itemData = useMemo(() => (showETH ? [Currency.VLX, ...currencies] : [...currencies]), [currencies, showETH])
+  const itemData = useMemo(() => (showVLX ? [Currency.VLX, ...currencies] : [...currencies]), [currencies, showVLX])
 
   const Row = useCallback(
     ({ data, index, style }) => {

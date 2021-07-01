@@ -25,14 +25,14 @@ export default function useWrapCallback(
   typedValue: string | undefined
 ): { wrapType: WrapType; execute?: undefined | (() => Promise<void>); inputError?: string } {
   const { chainId, account } = useActiveWeb3React()
-  const wethContract = useWVLXContract()
+  const wvlxContract = useWVLXContract()
   const balance = useCurrencyBalance(account ?? undefined, inputCurrency)
   // we can always parse the amount typed as the input currency, since wrapping is 1:1
   const inputAmount = useMemo(() => tryParseAmount(typedValue, inputCurrency), [inputCurrency, typedValue])
   const addTransaction = useTransactionAdder()
 
   return useMemo(() => {
-    if (!wethContract || !chainId || !inputCurrency || !outputCurrency) return NOT_APPLICABLE
+    if (!wvlxContract || !chainId || !inputCurrency || !outputCurrency) return NOT_APPLICABLE
 
     const sufficientBalance = inputAmount && balance && !balance.lessThan(inputAmount)
 
@@ -43,14 +43,14 @@ export default function useWrapCallback(
           sufficientBalance && inputAmount
             ? async () => {
                 try {
-                  const txReceipt = await wethContract.deposit({ value: `0x${inputAmount.raw.toString(16)}` })
-                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} BNB to WBNB` })
+                  const txReceipt = await wvlxContract.deposit({ value: `0x${inputAmount.raw.toString(16)}` })
+                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} VLX to WVLX` })
                 } catch (error) {
                   console.error('Could not deposit', error)
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : 'Insufficient BNB balance'
+        inputError: sufficientBalance ? undefined : 'Insufficient VLX balance'
       }
     } if (currencyEquals(WVLX[chainId], inputCurrency) && outputCurrency === VLX) {
       return {
@@ -59,17 +59,17 @@ export default function useWrapCallback(
           sufficientBalance && inputAmount
             ? async () => {
                 try {
-                  const txReceipt = await wethContract.withdraw(`0x${inputAmount.raw.toString(16)}`)
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WBNB to BNB` })
+                  const txReceipt = await wvlxContract.withdraw(`0x${inputAmount.raw.toString(16)}`)
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WVLX to VLX` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : 'Insufficient WBNB balance'
+        inputError: sufficientBalance ? undefined : 'Insufficient WVLX balance'
       }
     } 
       return NOT_APPLICABLE
     
-  }, [wethContract, chainId, inputCurrency, outputCurrency, inputAmount, balance, addTransaction])
+  }, [wvlxContract, chainId, inputCurrency, outputCurrency, inputAmount, balance, addTransaction])
 }
