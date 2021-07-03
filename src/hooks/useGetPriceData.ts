@@ -15,7 +15,8 @@ type ApiResponse = {
 }
 
 // const api = 'https://api.wagyuswap.info/api/tokens'
-const api = 'https://explorer.velas.com/ticker'
+const api = 'https://explorer.Velas.com/ticker'
+// const api = 'http://localhost:3000/api/tokens'
 
 // data:
 //   0x0C038Bc02C8C9945f194b17C703f800526900A74:

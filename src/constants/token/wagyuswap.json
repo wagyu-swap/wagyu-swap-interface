@@ -13,42 +13,42 @@
     {
       "name": "WVLX Token",
       "symbol": "WVLX",
-      "address": "0x9dEFA62631b98B486459B024F4F2986BA092e231",
+      "address": "0x8153DCbdAF8740B6e101C99659613D39Dd697E34",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x9dEFA62631b98B486459B024F4F2986BA092e231.png"
+      "logoURI": "/images/coins/0x8153DCbdAF8740B6e101C99659613D39Dd697E34.png"
     },
     {
       "name": "Velas USDT Token",
       "symbol": "VUSDT",
-      "address": "0x74Be128df5e3f4B6c7Fa68945904510652Baac9B",
+      "address": "0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x74Be128df5e3f4B6c7Fa68945904510652Baac9B.png"
+      "logoURI": "/images/coins/0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF.png"
     },
     {
       "name": "Velas Ethereum Token",
       "symbol": "VETHER",
-      "address": "0x3CB790052DE008072708b9DE269A0FF97d6cDC09",
+      "address": "0xc8100b0041e376C6E922f39A1c7270cE12f94F6f",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x3CB790052DE008072708b9DE269A0FF97d6cDC09.png"
+      "logoURI": "/images/coins/0xc8100b0041e376C6E922f39A1c7270cE12f94F6f.png"
     },
     {
       "name": "Velas BNB Token",
       "symbol": "VBNB",
-      "address": "0x23f639A4986Db3f59F689529871A9412BC6B68b2",
+      "address": "0xCbe7530E3f9730F7D4A965206A00DC8347662447",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x23f639A4986Db3f59F689529871A9412BC6B68b2.png"
+      "logoURI": "/images/coins/0xCbe7530E3f9730F7D4A965206A00DC8347662447.png"
     },
     {
       "name": "WagyuSwap Token",
       "symbol": "WAGYU",
-      "address": "0x9c545b6AF18E67A42cC5562dfb0Ba3e28c33e60a",
+      "address": "0x297170abcFC7AceA729ce128E1326bE125a7F982",
       "chainId": 111,
       "decimals": 18,
-      "logoURI": "/images/coins/0x9c545b6AF18E67A42cC5562dfb0Ba3e28c33e60a.png"
+      "logoURI": "/images/coins/0x297170abcFC7AceA729ce128E1326bE125a7F982.png"
     }
   ]
 }

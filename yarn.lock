@@ -3229,19 +3229,6 @@
     truffle-flattener "^1.4.4"
     truffle-hdwallet-provider "^1.0.17"
 
-"@pancakeswap-libs/sdk@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/sdk/-/sdk-1.0.1.tgz#602e6da34fd5bde0f3c869f9abe63bb5f4aaf063"
-  integrity sha512-N4EZlAD0PD7lgVEE8jOufUPRNBvcR3STSjBC9QVwoKmmH1czEY9lu8/SySecKchZtSi66qAfsrghkdXo8tnJsg==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
 "@pedrouid/iso-crypto@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@pedrouid/iso-crypto/-/iso-crypto-1.0.0.tgz#cf06b40ef3da3d7ca7363bd7a521ed59fa2fd13d"
@@ -4899,11 +4886,6 @@
   resolved "https://registry.yarnpkg.com/@uniswap/v2-core/-/v2-core-1.0.0.tgz#e0fab91a7d53e8cafb5326ae4ca18351116b0844"
   integrity sha512-BJiXrBGnN8mti7saW49MXwxDBRFiWemGetE58q8zgfnPPzQKq55ADltEILqOt6VFZ22kVeVKbF8gVd8aY3l7pA==
 
-"@uniswap/v2-core@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/v2-core/-/v2-core-1.0.1.tgz#af8f508bf183204779938969e2e54043e147d425"
-  integrity sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q==
-
 "@uniswap/v2-periphery@^1.1.0-beta.0":
   version "1.1.0-beta.0"
   resolved "https://registry.yarnpkg.com/@uniswap/v2-periphery/-/v2-periphery-1.1.0-beta.0.tgz#20a4ccfca22f1a45402303aedb5717b6918ebe6d"
@@ -4912,10 +4894,10 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@wagyu-swap-libs/sdk@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/sdk/-/sdk-0.0.2.tgz#38ac76d1e7f9c21023e6c7864215d93ca05a536c"
-  integrity sha512-iPKDlFslUnX687a+ilvdDxwGWgKKPmp+a+czXZ2uWE40uXogxaTpanv2kIzWj7CBQz+A26F/taBtaXZFSqSYhA==
+"@wagyu-swap-libs/sdk@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/sdk/-/sdk-0.0.8.tgz#28abde8ff9b85ce0d228c8ddcf1e336114ee1aa0"
+  integrity sha512-AbpGtiAowMmcjIoWk6E+bpkQFlDWP0masSNOmMjOT3/agGMn1wMkSGX6/pK5LL1ZOZh0sLhB3YNGN7Mwo06kOw==
   dependencies:
     "@pancakeswap-libs/pancake-swap-core" "^0.1.0"
     big.js "^5.2.2"
@@ -4925,10 +4907,10 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@wagyu-swap-libs/uikit@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.2.0.tgz#9c4b5278276be36b19418ddf9b6e144032dfc206"
-  integrity sha512-vN5lyLRyRnlkhgo/vHAGFc3QArk03GRgVF6oit/6auJ+lbp8E1PnhvxV0DQdpmKn3u+ZjNzwuscuaHIwIY6oeg==
+"@wagyu-swap-libs/uikit@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.2.1.tgz#23bd48003c4a9c10dd6493fe9e46fb31061e2498"
+  integrity sha512-9zl1CMHcOwn5cfad3Lb9I2UZYnUtTCsaz1pbUNxUtk4iFpdGppo9o6HtFKGh5thVkHUWajl0hrGAPUelMNHQ+w==
   dependencies:
     "@pancakeswap-libs/eslint-config-pancake" "^1.0.1"
     "@popperjs/core" "^2.9.2"

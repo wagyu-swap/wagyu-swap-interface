@@ -1,17 +1,17 @@
 import { ChainId, IS_MAINNET, JSBI, Percent, Token, WVLX } from '@wagyu-swap-libs/sdk'
 
-export const ROUTER_ADDRESS = '0x948a3033bbABB495E400d88a04136f8b36455a58'
+export const ROUTER_ADDRESS = '0x9B5de93ea81853404741aA5baBceAa7919B0dD48'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const WAGYU = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x9c545b6AF18E67A42cC5562dfb0Ba3e28c33e60a', 18, 'WAGYU', 'WagyuSwap Token')
-export const WrapVLX = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x9dEFA62631b98B486459B024F4F2986BA092e231', 18, 'WVLX', 'Wrapped VLX')
-export const VETHER = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x3CB790052DE008072708b9DE269A0FF97d6cDC09', 18, 'VETHER', 'Velas ETHER')
-export const VUSDT = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x74Be128df5e3f4B6c7Fa68945904510652Baac9B', 18, 'VUSDT', 'Velas USDT')
-export const VBNB = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x23f639A4986Db3f59F689529871A9412BC6B68b2', 18, 'VBNB', 'Velas BNB')
+export const WAGYU = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x297170abcFC7AceA729ce128E1326bE125a7F982', 18, 'WAGYU', 'WagyuSwap Token')
+export const WrapVLX = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x8153DCbdAF8740B6e101C99659613D39Dd697E34', 18, 'WVLX', 'Wrapped VLX')
+export const VETHER = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0xc8100b0041e376C6E922f39A1c7270cE12f94F6f', 18, 'VETHER', 'Velas ETHER')
+export const VUSDT = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF', 18, 'VUSDT', 'Velas USDT')
+export const VBNB = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0xCbe7530E3f9730F7D4A965206A00DC8347662447', 18, 'VBNB', 'Velas BNB')
 
 const WVLX_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WVLX[ChainId.MAINNET]],
