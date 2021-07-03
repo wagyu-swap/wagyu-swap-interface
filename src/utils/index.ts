@@ -27,14 +27,14 @@ export function getVelasScanLink(chainId: ChainId, data: string, type: 'transact
 
   switch (type) {
     case 'transaction': {
-      return `${prefix}/tx/${data}`
+      return `${prefix}/tx/${data}/internal-transactions`
     }
     case 'token': {
-      return `${prefix}/tokens/${data}`
+      return `${prefix}/tokens/${data}/token-transfers`
     }
     case 'address':
     default: {
-      return `${prefix}/address/${data}`
+      return `${prefix}/address/${data}/transactions`
     }
   }
 }
