@@ -4907,10 +4907,10 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@wagyu-swap-libs/uikit@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.2.1.tgz#23bd48003c4a9c10dd6493fe9e46fb31061e2498"
-  integrity sha512-9zl1CMHcOwn5cfad3Lb9I2UZYnUtTCsaz1pbUNxUtk4iFpdGppo9o6HtFKGh5thVkHUWajl0hrGAPUelMNHQ+w==
+"@wagyu-swap-libs/uikit@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/uikit/-/uikit-0.2.2.tgz#d03f4d19007e2b6de4c55158842e6a13ca6c694d"
+  integrity sha512-Linh7GPD007JHZcz9ZIS1JN09U/OjhhWFxesP/SfhtdhZttl/ja37aGGT+PGdBAwSAGmWykGBudCVqGFxagnBQ==
   dependencies:
     "@pancakeswap-libs/eslint-config-pancake" "^1.0.1"
     "@popperjs/core" "^2.9.2"
