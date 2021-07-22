@@ -1,13 +1,7 @@
 {
   "short_name": "WagyuSwap",
   "name": "WagyuSwap",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "type": "image/x-icon",
-      "sizes": "256x256"
-    }
-  ],
+  "description": "Farm WAGYU with Wagyu LP Tokens",
   "orientation": "portrait",
   "display": "standalone",
   "theme_color": "#000000",
