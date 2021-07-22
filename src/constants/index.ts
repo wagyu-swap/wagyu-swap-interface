@@ -1,42 +1,28 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
+import { ChainId, IS_MAINNET, JSBI, Percent, Token, WVLX } from '@wagyu-swap-libs/sdk'
 
-export const ROUTER_ADDRESS = '0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F'
+export const ROUTER_ADDRESS = '0x9B5de93ea81853404741aA5baBceAa7919B0dD48'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const CAKE = new Token(ChainId.MAINNET, '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 18, 'CAKE', 'PancakeSwap Token')
-export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
-export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
-export const BUSD = new Token(ChainId.MAINNET, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
-export const BTCB = new Token(ChainId.MAINNET, '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18, 'BTCB', 'Binance BTC')
-export const USDT = new Token(ChainId.MAINNET, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'Tether USD')
-export const UST = new Token(
-  ChainId.MAINNET,
-  '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
-  18,
-  'UST',
-  'Wrapped UST Token'
-)
-export const ETH = new Token(
-  ChainId.MAINNET,
-  '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
-  18,
-  'ETH',
-  'Binance-Peg Ethereum Token'
-)
+export const WAGYU = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x297170abcFC7AceA729ce128E1326bE125a7F982', 18, 'WAGYU', 'WagyuSwap Token')
+export const WrapVLX = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x8153DCbdAF8740B6e101C99659613D39Dd697E34', 18, 'WVLX', 'Wrapped VLX')
+export const VETHER = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0xc8100b0041e376C6E922f39A1c7270cE12f94F6f', 18, 'VETHER', 'Velas ETHER')
+export const VUSDT = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF', 18, 'VUSDT', 'Velas USDT')
+export const VBNB = new Token(IS_MAINNET ? ChainId.MAINNET : ChainId.VELASTESTNET, IS_MAINNET ? '' : '0xCbe7530E3f9730F7D4A965206A00DC8347662447', 18, 'VBNB', 'Velas BNB')
 
-const WETH_ONLY: ChainTokenList = {
-  [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
-  [ChainId.BSCTESTNET]: [WETH[ChainId.BSCTESTNET]],
+const WVLX_ONLY: ChainTokenList = {
+  [ChainId.MAINNET]: [WVLX[ChainId.MAINNET]],
+  [ChainId.VELASTESTNET]: [WVLX[ChainId.VELASTESTNET]],
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
-  ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, BTCB, USDT, UST, ETH],
+  ...WVLX_ONLY,
+  [ChainId.MAINNET]: [...WVLX_ONLY[ChainId.MAINNET], VUSDT, VETHER, VBNB],
+  [ChainId.VELASTESTNET]: [...WVLX_ONLY[ChainId.VELASTESTNET], VUSDT, VETHER, VBNB],
 }
 
 /**
@@ -45,25 +31,37 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
   [ChainId.MAINNET]: {},
+  [ChainId.VELASTESTNET]: {},
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT],
+  ...WVLX_ONLY,
+  [ChainId.MAINNET]: [...WVLX_ONLY[ChainId.MAINNET], VUSDT, VETHER, VBNB],
+  [ChainId.VELASTESTNET]: [...WVLX_ONLY[ChainId.VELASTESTNET], VUSDT, VETHER, VBNB],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, BTCB, USDT],
+  ...WVLX_ONLY,
+  [ChainId.MAINNET]: [...WVLX_ONLY[ChainId.MAINNET], VUSDT, VETHER, VBNB],
+  [ChainId.VELASTESTNET]: [...WVLX_ONLY[ChainId.VELASTESTNET], VUSDT, VETHER, VBNB],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
-    [CAKE, WBNB],
-    [BUSD, USDT],
-    [DAI, USDT],
+    [WAGYU, WrapVLX],
+    [VUSDT, WrapVLX],
+    [VUSDT, WAGYU],
+    [VETHER, WAGYU],
+    [VBNB, WAGYU],
+  ],
+  [ChainId.VELASTESTNET]: [
+    [WAGYU, WrapVLX],
+    [VUSDT, WrapVLX],
+    [VUSDT, WAGYU],
+    [VETHER, WAGYU],
+    [VBNB, WAGYU],
   ],
 }
 
@@ -86,5 +84,5 @@ export const PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN: Percent = new Percent(JSBI.Bi
 // for non expert mode disable swaps above this
 export const BLOCKED_PRICE_IMPACT_NON_EXPERT: Percent = new Percent(JSBI.BigInt(1500), BIPS_BASE) // 15%
 
-// used to ensure the user doesn't send so much ETH so they end up with <.01
-export const MIN_ETH: JSBI = JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(16)) // .01 ETH
+// used to ensure the user doesn't send so much VLX so they end up with <.01
+export const MIN_VLX: JSBI = JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(16)) // .01 VLX

@@ -1,59 +1,61 @@
-export const EN = { code: 'en', language: 'English' }
-export const AR = { code: 'ar', language: 'العربية' }
-export const BN = { code: 'bn', language: 'বাংলা'}
-export const ZHCN = { code: 'zh-CN', language: '简体中文' }
-export const ZHTW = { code: 'zh-TW', language: '繁體中文' }
-export const NL = { code: 'nl', language: 'Nederlands' }
-export const FIL = { code: 'fil', language: 'Filipino' }
-export const FI = { code: 'fi', language: 'Suomalainen' }
-export const FR = { code: 'fr', language: 'Français' }
-export const DE = { code: 'de', language: 'Deutsch' }
-export const EL = { code: 'el', language: 'Ελληνικά' }
-export const HI = { code: 'hi', language: 'हिंदी' }
-export const HU = { code: 'hu', language: 'Magyar' }
-export const ID = { code: 'id', language: 'Bahasa Indonesia' }
-export const IT = { code: 'it', language: 'Italiano' }
-export const JA = { code: 'ja', language: '日本語' }
-export const KO = { code: 'ko', language: '한국어' }
-export const PL = { code: 'pl', language: 'Polski' }
-export const PTPT = { code: 'pt-PT', language: 'Português (Portugal)' }
-export const PTBR = { code: 'pt-BR', language: 'Português (Brasil)' }
-export const RO = { code: 'ro', language: 'Română' }
-export const RU = { code: 'ru', language: 'Русский' }
-export const ESES = { code: 'es-ES', language: 'Español' }
-export const SVSE = { code: 'sv-SE', language: 'Svenska' }
-export const TA = { code: 'ta', language: 'தமிழ்' }
-export const TR = { code: 'tr', language: 'Türkçe' }
-export const UK = { code: 'uk', language: 'Українська' }
-export const VI = { code: 'vi', language: 'Tiếng Việt' }
+import { Language } from '@wagyu-swap-libs/uikit'
+
+export const AR: Language = { locale: 'ar-SA', language: 'العربية', code: 'ar' }
+export const BN: Language = { locale: 'bn-BD', language: 'বাংলা', code: 'bn' }
+export const EN: Language = { locale: 'en-US', language: 'English', code: 'en' }
+export const DE: Language = { locale: 'de-DE', language: 'Deutsch', code: 'de' }
+export const EL: Language = { locale: 'el-GR', language: 'Ελληνικά', code: 'el' }
+export const ESES: Language = { locale: 'es-ES', language: 'Español', code: 'es-ES' }
+export const FI: Language = { locale: 'fi-FI', language: 'Suomalainen', code: 'fi' }
+export const FIL: Language = { locale: 'fil-PH', language: 'Filipino', code: 'fil' }
+export const FR: Language = { locale: 'fr-FR', language: 'Français', code: 'fr' }
+export const HI: Language = { locale: 'hi-IN', language: 'हिंदी', code: 'hi' }
+export const HU: Language = { locale: 'hu-HU', language: 'Magyar', code: 'hu' }
+export const ID: Language = { locale: 'id-ID', language: 'Bahasa Indonesia', code: 'id' }
+export const IT: Language = { locale: 'it-IT', language: 'Italiano', code: 'it' }
+export const JA: Language = { locale: 'ja-JP', language: '日本語', code: 'ja' }
+export const KO: Language = { locale: 'ko-KR', language: '한국어', code: 'ko' }
+export const NL: Language = { locale: 'nl-NL', language: 'Nederlands', code: 'nl' }
+export const PL: Language = { locale: 'pl-PL', language: 'Polski', code: 'pl' }
+export const PTBR: Language = { locale: 'pt-BR', language: 'Português (Brazil)', code: 'pt-br' }
+export const PTPT: Language = { locale: 'pt-PT', language: 'Português', code: 'pt-pt' }
+export const RO: Language = { locale: 'ro-RO', language: 'Română', code: 'ro' }
+export const RU: Language = { locale: 'ru-RU', language: 'Русский', code: 'ru' }
+export const SVSE: Language = { locale: 'sv-SE', language: 'Svenska', code: 'sv' }
+export const TA: Language = { locale: 'ta-IN', language: 'தமிழ்', code: 'ta' }
+export const TR: Language = { locale: 'tr-TR', language: 'Türkçe', code: 'tr' }
+export const UK: Language = { locale: 'uk-UA', language: 'Українська', code: 'uk' }
+export const VI: Language = { locale: 'vi-VN', language: 'Tiếng Việt', code: 'vi' }
+export const ZHCN: Language = { locale: 'zh-CN', language: '简体中文', code: 'zh-cn' }
+export const ZHTW: Language = { locale: 'zh-TW', language: '繁體中文', code: 'zh-tw' }
 
 export const allLanguages = [
   EN,
-  AR,
-  BN,
-  ZHCN,
-  ZHTW,
-  NL,
-  FIL,
-  FI,
-  FR,
-  DE,
-  EL,
-  HI,
-  HU,
-  ID,
-  IT,
-  JA,
-  KO,
-  PL,
-  PTPT,
-  PTBR,
-  RO,
-  RU,
-  ESES,
-  SVSE,
-  TA,
-  TR,
-  UK,
-  VI
+  // AR,
+  // BN,
+  // ZHCN,
+  // ZHTW,
+  // NL,
+  // FIL,
+  // FI,
+  // FR,
+  // DE,
+  // EL,
+  // HI,
+  // HU,
+  // ID,
+  // IT,
+  // JA,
+  // KO,
+  // PL,
+  // PTPT,
+  // PTBR,
+  // RO,
+  // RU,
+  // ESES,
+  // SVSE,
+  // TA,
+  // TR,
+  // UK,
+  // VI
 ]

@@ -1,0 +1,54 @@
+{
+  "name": "WagyuSwap Default List",
+  "timestamp": "2021-06-25T09:56:23Z",
+  "version": {
+    "major": 2,
+    "minor": 10,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/images/wagyuswap.png",
+  "keywords": ["wagyu", "default"],
+  "tokens": [
+    {
+      "name": "WVLX Token",
+      "symbol": "WVLX",
+      "address": "0x8153DCbdAF8740B6e101C99659613D39Dd697E34",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x8153DCbdAF8740B6e101C99659613D39Dd697E34.png"
+    },
+    {
+      "name": "Velas USDT Token",
+      "symbol": "VUSDT",
+      "address": "0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x9634eB81dDa37C30a2aD79b3000c20FDD98799aF.png"
+    },
+    {
+      "name": "Velas Ethereum Token",
+      "symbol": "VETHER",
+      "address": "0xc8100b0041e376C6E922f39A1c7270cE12f94F6f",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xc8100b0041e376C6E922f39A1c7270cE12f94F6f.png"
+    },
+    {
+      "name": "Velas BNB Token",
+      "symbol": "VBNB",
+      "address": "0xCbe7530E3f9730F7D4A965206A00DC8347662447",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xCbe7530E3f9730F7D4A965206A00DC8347662447.png"
+    },
+    {
+      "name": "WagyuSwap Token",
+      "symbol": "WAGYU",
+      "address": "0x297170abcFC7AceA729ce128E1326bE125a7F982",
+      "chainId": 111,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x297170abcFC7AceA729ce128E1326bE125a7F982.png"
+    }
+  ]
+}

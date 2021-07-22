@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from '@wagyu-swap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import useENS from '../../hooks/useENS'
 import { useActiveWeb3React } from '../../hooks'
 import { ExternalLink } from '../Shared'
 import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
-import { getBscScanLink } from '../../utils'
+import { getVelasScanLink } from '../../utils'
 
 const InputPanel = styled.div`
   display: flex;
@@ -104,8 +104,8 @@ export default function AddressInputPanel({
                 {TranslateString(1138, 'Recipient')}
               </Text>
               {address && chainId && (
-                <ExternalLink href={getBscScanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
-                  {TranslateString(116, '(View on BscScan)')}
+                <ExternalLink href={getVelasScanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
+                  {TranslateString(116, '(View on VelasScan)')}
                 </ExternalLink>
               )}
             </RowBetween>

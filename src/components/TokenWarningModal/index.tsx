@@ -1,13 +1,13 @@
-import { Token } from '@pancakeswap-libs/sdk'
+import { Token } from '@wagyu-swap-libs/sdk'
 import { transparentize } from 'polished'
-import { Button, Text } from '@pancakeswap-libs/uikit'
+import { Button, Text } from '@wagyu-swap-libs/uikit'
 import React, { useCallback, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { AlertTriangle } from 'react-feather'
 import useI18n from 'hooks/useI18n'
 import { useActiveWeb3React } from '../../hooks'
 import { useAllTokens } from '../../hooks/Tokens'
-import { getBscScanLink, shortenAddress } from '../../utils'
+import { getVelasScanLink, shortenAddress } from '../../utils'
 import { ExternalLink } from '../Shared'
 import CurrencyLogo from '../CurrencyLogo'
 import Modal from '../Modal'
@@ -74,9 +74,9 @@ function TokenWarningCard({ token }: TokenWarningCardProps) {
               : token.name || token.symbol}{' '}
           </Text>
           {chainId && (
-            <ExternalLink style={{ fontWeight: 400 }} href={getBscScanLink(chainId, token.address, 'token')}>
+            <ExternalLink style={{ fontWeight: 400 }} href={getVelasScanLink(chainId, token.address, 'token')}>
               <Text title={token.address}>
-                {shortenAddress(token.address)} {TranslateString(116, '(View on BscScan)')}
+                {shortenAddress(token.address)} {TranslateString(116, '(View on VelasScan)')}
               </Text>
             </ExternalLink>
           )}
@@ -111,7 +111,7 @@ export default function TokenWarningModal({
           <Text>
             {TranslateString(
               1130,
-              'Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.'
+              'Anyone can create a VLS20 token on VELAS with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.'
             )}
           </Text>
           <Text>

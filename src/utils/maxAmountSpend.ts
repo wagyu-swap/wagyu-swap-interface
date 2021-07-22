@@ -1,5 +1,5 @@
-import { CurrencyAmount, ETHER, JSBI } from '@pancakeswap-libs/sdk'
-import { MIN_ETH } from '../constants'
+import { CurrencyAmount, VLX, JSBI } from '@wagyu-swap-libs/sdk'
+import { MIN_VLX } from '../constants'
 
 /**
  * Given some token amount, return the max that can be spent of it
@@ -7,11 +7,11 @@ import { MIN_ETH } from '../constants'
  */
 export function maxAmountSpend(currencyAmount?: CurrencyAmount): CurrencyAmount | undefined {
   if (!currencyAmount) return undefined
-  if (currencyAmount.currency === ETHER) {
-    if (JSBI.greaterThan(currencyAmount.raw, MIN_ETH)) {
-      return CurrencyAmount.ether(JSBI.subtract(currencyAmount.raw, MIN_ETH))
+  if (currencyAmount.currency === VLX) {
+    if (JSBI.greaterThan(currencyAmount.raw, MIN_VLX)) {
+      return CurrencyAmount.vlx(JSBI.subtract(currencyAmount.raw, MIN_VLX))
     }
-    return CurrencyAmount.ether(JSBI.BigInt(0))
+    return CurrencyAmount.vlx(JSBI.BigInt(0))
   }
   return currencyAmount
 }

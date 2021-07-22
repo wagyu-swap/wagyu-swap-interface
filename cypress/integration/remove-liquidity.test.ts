@@ -7,28 +7,28 @@ describe('Remove Liquidity', () => {
     )
   })
 
-  it('bnb remove', () => {
-    cy.visit('/remove/BNB/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'BNB')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'CAKE')
+  it('vlx remove', () => {
+    cy.visit('/remove/VLX/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')
+    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'VLX')
+    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'WAGYU')
   })
 
-  it('bnb remove swap order', () => {
-    cy.visit('/remove/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/BNB')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'CAKE')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'BNB')
+  it('vlx remove swap order', () => {
+    cy.visit('/remove/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/VLX')
+    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WAGYU')
+    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'VLX')
   })
 
   it('loads the two correct tokens', () => {
     cy.visit('/remove/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82-0xe9e7cea3dedca5984780bafc599bd69add087d56')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'CAKE')
+    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WAGYU')
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'BUSD')
   })
 
-  it('does not crash if CAKE is duplicated', () => {
+  it('does not crash if WAGYU is duplicated', () => {
     cy.visit('/remove/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82-0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'CAKE')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'CAKE')
+    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WAGYU')
+    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'WAGYU')
   })
 
   it('token not in storage is loaded', () => {
