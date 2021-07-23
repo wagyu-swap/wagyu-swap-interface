@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://wagyuswap.herokuapp.com/',
+    href: 'https://d2hlj97m1t9tlc.cloudfront.net/',
   },
   {
     label: 'Trade',
@@ -24,17 +24,17 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://wagyuswap.herokuapp.com/farms',
+    href: 'https://d2hlj97m1t9tlc.cloudfront.net/farms',
   },
-  // {
-  //   label: 'Pools',
-  //   icon: 'PoolIcon',
-  //   href: 'https://wagyuswap.herokuapp.com/pools',
-  // },
+  {
+    label: 'Pools',
+    icon: 'PoolIcon',
+    href: 'https://d2hlj97m1t9tlc.cloudfront.net/pools',
+  },
   {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://wagyuswap.herokuapp.com/lottery',
+    href: 'https://d2hlj97m1t9tlc.cloudfront.net/lottery',
   },
 ]
 
