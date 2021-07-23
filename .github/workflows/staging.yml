@@ -38,19 +38,19 @@ jobs:
       run: yarn build
 
     - name: Executing remote ssh commands using password(Git Pull, Build)
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          password: ${{ secrets.REMOTE_PASSWORD }}
-          port: ${{ secrets.REMOTE_PORT }}
-          script: |
-            cd /root/projects/wagyu-swap-interface
-            git reset --hard origin/staging
-            git pull
-            yarn
-            rm -rf build
-            yarn build
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        port: ${{ secrets.REMOTE_PORT }}
+        script: |
+          cd /root/projects/wagyu-swap-interface
+          git reset --hard origin/staging
+          git pull
+          yarn
+          rm -rf build
+          yarn build
 
     - name: Update deployment status
       uses: bobheadxi/deployments@master
