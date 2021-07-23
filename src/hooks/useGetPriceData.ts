@@ -14,7 +14,7 @@ type ApiResponse = {
   }
 }
 
-const api = 'https://wagyu-api.vercel.app/api/tokens'
+const api = 'https://wagyu-swap-api.vercel.app/api/tokens'
 
 const useGetPriceData = () => {
   const [data, setData] = useState<ApiResponse | null>(null)
@@ -26,6 +26,7 @@ const useGetPriceData = () => {
         const response = await fetch(api)
         const res: ApiResponse = await response.json()
         if (isSubscribed) {
+          console.log('res:', res)
           setData(res)
         }
       } catch (error) {
