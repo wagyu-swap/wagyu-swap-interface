@@ -40,9 +40,9 @@ jobs:
     - name: Executing remote ssh commands using password(Git Pull, Build)
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_PASSWORD }}
+        host: ${{ secrets.REMOTE_HOST_STAGING }}
+        username: ${{ secrets.REMOTE_USER_STAGING }}
+        password: ${{ secrets.REMOTE_PASSWORD_STAGING }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
           cd /root/projects/wagyu-swap-interface
