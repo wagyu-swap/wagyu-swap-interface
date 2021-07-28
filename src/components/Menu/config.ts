@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://d2hlj97m1t9tlc.cloudfront.net/',
+    href: 'https://staging.wagyuswap.app/',
   },
   {
     label: 'Trade',
@@ -24,17 +24,17 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://d2hlj97m1t9tlc.cloudfront.net/farms',
+    href: 'https://staging.wagyuswap.app/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://d2hlj97m1t9tlc.cloudfront.net/pools',
+    href: 'https://staging.wagyuswap.app/pools',
   },
   {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://d2hlj97m1t9tlc.cloudfront.net/lottery',
+    href: 'https://staging.wagyuswap.app/lottery',
   },
 ]
 

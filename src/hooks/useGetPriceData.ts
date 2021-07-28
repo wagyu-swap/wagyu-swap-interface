@@ -14,7 +14,7 @@ type ApiResponse = {
   }
 }
 
-const api = 'https://wagyu-swap-api.vercel.app/api/tokens'
+const api = 'https://staging.api.wagyuswap.app/api/tokens'
 
 const useGetPriceData = () => {
   const [data, setData] = useState<ApiResponse | null>(null)
