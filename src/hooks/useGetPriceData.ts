@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 
-import { VBNB, VETHER, VUSDT, WAGYU } from '../constants'
-
 type ApiResponse = {
   updated_at: string
   data: {
@@ -26,7 +24,6 @@ const useGetPriceData = () => {
         const response = await fetch(api)
         const res: ApiResponse = await response.json()
         if (isSubscribed) {
-          console.log('res:', res)
           setData(res)
         }
       } catch (error) {
