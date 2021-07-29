@@ -4894,10 +4894,10 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@wagyu-swap-libs/sdk@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/sdk/-/sdk-0.0.8.tgz#28abde8ff9b85ce0d228c8ddcf1e336114ee1aa0"
-  integrity sha512-AbpGtiAowMmcjIoWk6E+bpkQFlDWP0masSNOmMjOT3/agGMn1wMkSGX6/pK5LL1ZOZh0sLhB3YNGN7Mwo06kOw==
+"@wagyu-swap-libs/sdk@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@wagyu-swap-libs/sdk/-/sdk-0.0.9.tgz#6b575e2b31d534986d2142f0d43ab4e3442dcfe5"
+  integrity sha512-6fZOeOu/REaRXNnf94LPklpPkWam1icjUsMTXUi2bRW5So6MHwJcU5liGqo8oAnJznralEFGU6elUYdzRwmBUA==
   dependencies:
     "@pancakeswap-libs/pancake-swap-core" "^0.1.0"
     big.js "^5.2.2"

@@ -124,7 +124,6 @@ export function useSwapCallback(
               contract,
             } = call
             const options = !value || isZero(value) ? {} : { value }
-
             return contract.estimateGas[methodName](...args, options)
               .then((gasEstimate) => {
                 return {
@@ -144,8 +143,8 @@ export function useSwapCallback(
                     console.info('Call threw error', call, callError)
                     let errorMessage: string
                     switch (callError.reason) {
-                      case 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT':
-                      case 'UniswapV2Router: EXCESSIVE_INPUT_AMOUNT':
+                      case 'WagyuRouter: INSUFFICIENT_OUTPUT_AMOUNT':
+                      case 'WagyuRouter: EXCESSIVE_INPUT_AMOUNT':
                         errorMessage =
                           'This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.'
                         break
