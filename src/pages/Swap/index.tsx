@@ -15,7 +15,7 @@ import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWith
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
 import TradePrice from 'components/swap/TradePrice'
 import TokenWarningModal from 'components/TokenWarningModal'
-import SyrupWarningModal from 'components/SyrupWarningModal'
+import SauceWarningModal from 'components/SauceWarningModal'
 import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
 
@@ -281,7 +281,7 @@ const Swap = () => {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      <SyrupWarningModal
+      <SauceWarningModal
         isOpen={transactionWarning.selectedToken === 'SAUCE'}
         transactionType={transactionWarning.purchaseType}
         onConfirm={handleConfirmWarning}

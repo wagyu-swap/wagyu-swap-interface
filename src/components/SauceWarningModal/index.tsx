@@ -20,7 +20,7 @@ const StyledWarningIcon = styled(AlertTriangle)`
   stroke: ${({ theme }) => theme.colors.failure};
 `
 
-export default function SyrupWarningModal({
+export default function SauceWarningModal({
   isOpen,
   transactionType,
   onConfirm,
