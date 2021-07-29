@@ -39,17 +39,17 @@ export default function SyrupWarningModal({
         <AutoColumn gap="lg">
           <AutoRow gap="6px">
             <StyledWarningIcon />
-            <Text color="failure">Syrup Warning</Text>
+            <Text color="failure">Sauce Warning</Text>
           </AutoRow>
           {transactionType !== '' && (
             <>
               <Text color="failure">
-                Please be careful when <strong>{transactionType}</strong> SYRUP.
+                Please be careful when <strong>{transactionType}</strong> SAUCE.
               </Text>
               <Text color="failure">
                 {transactionType === 'Buying'
-                  ? 'You will not receive WAGYU rewards for holding purchased SYRUP.'
-                  : 'You will need to buy back the same amount of SYRUP to be able to convert back to WAGYU.'}
+                  ? 'You will not receive WAGYU rewards for holding purchased SAUCE.'
+                  : 'You will need to buy back the same amount of SAUCE to be able to convert back to WAGYU.'}
               </Text>
             </>
           )}
